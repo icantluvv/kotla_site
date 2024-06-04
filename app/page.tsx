@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Product from './(components)/product';
+import Brand from './(components)/brand';
 
 export default function Home() {
   return (
@@ -12,51 +14,9 @@ export default function Home() {
           you.
         </p>
         <div className="flex w-[90%] justify-center gap-6 flex-wrap">
-          <div className="flex max-w-[386px] flex-col items-center">
-            <div>
-              <Image
-                src={'/1st.svg'}
-                alt={''}
-                width={386}
-                height={357}
-                className="max-w-[386px]"
-                layout="responsive"
-              ></Image>
-            </div>
-            <span className="text-[24px]  mt-[2em] text-[#333333] font-semibold">
-              Matte
-            </span>
-          </div>
-          <div className="flex max-w-[386px] flex-col items-center">
-            <div>
-              <Image
-                src={'/1st.svg'}
-                alt={''}
-                width={386}
-                height={357}
-                className="max-w-[386px]"
-                layout="responsive"
-              ></Image>
-            </div>
-            <span className="text-[24px] mt-[2em] text-[#333333] font-semibold">
-              Matte
-            </span>
-          </div>
-          <div className="flex max-w-[386px] flex-col items-center">
-            <div>
-              <Image
-                src={'/1st.svg'}
-                alt={''}
-                width={386}
-                height={357}
-                className="max-w-[386px]"
-                layout="responsive"
-              ></Image>
-            </div>
-            <span className="text-[24px] mt-[2em] text-[#333333] font-semibold">
-              Matte
-            </span>
-          </div>
+          <Brand></Brand>
+          <Brand></Brand>
+          <Brand></Brand>
         </div>
       </div>
 
@@ -64,45 +24,9 @@ export default function Home() {
         <h1 className="text-[40px] mb-[1em] font-bold	">Our Products</h1>
 
         <div className="flex w-[90%] justify-center gap-6 flex-wrap">
-          <div className="flex max-w-[391px] max-h-[524px] flex-col items-center">
-            <div>
-              <Image
-                src={'/1st.svg'}
-                alt={''}
-                width={386}
-                height={357}
-                className="max-w-[386px]"
-                layout="responsive"
-              ></Image>
-            </div>
-            <span className="text-[24px] mt-[2em]">Matte</span>
-          </div>
-          <div className="flex max-w-[386px] flex-col items-center">
-            <div>
-              <Image
-                src={'/1st.svg'}
-                alt={''}
-                width={386}
-                height={357}
-                className="max-w-[386px]"
-                layout="responsive"
-              ></Image>
-            </div>
-            <span className="text-[24px] mt-[2em]">Matte</span>
-          </div>
-          <div className="flex max-w-[386px] flex-col items-center">
-            <div>
-              <Image
-                src={'/1st.svg'}
-                alt={''}
-                width={386}
-                height={357}
-                className="max-w-[386px]"
-                layout="responsive"
-              ></Image>
-            </div>
-            <span className="text-[24px] mt-[2em]">Matte</span>
-          </div>
+          <Product />
+          <Product />
+          <Product />
         </div>
       </div>
 
