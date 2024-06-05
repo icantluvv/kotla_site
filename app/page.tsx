@@ -1,8 +1,14 @@
 import Image from 'next/image';
 import Product from './(components)/product';
 import Brand from './(components)/brand';
+import Link from 'next/link';
+import { getBrand } from './lib/getBrands';
+import { getProduct } from './lib/getProducts';
 
-export default function Home() {
+export default async function Home() {
+  const brand = await getBrand();
+  const product = await getProduct();
+
   return (
     <main className="w-full flex flex-col ">
       <div className="flex flex-col items-center mt-[2em] mb-[4em]">
@@ -14,20 +20,28 @@ export default function Home() {
           you.
         </p>
         <div className="flex w-[90%] justify-center gap-6 flex-wrap">
-          <Brand></Brand>
-          <Brand></Brand>
-          <Brand></Brand>
+          {Array.isArray(brand) &&
+            brand.map((item, index: number) => (
+              <Brand key={index} brand={item}></Brand>
+            ))}
         </div>
       </div>
 
       <div className="flex flex-col items-center mb-[2em]">
         <h1 className="text-[40px] mb-[1em] font-bold	">Our Products</h1>
 
-        <div className="flex w-[90%] justify-center gap-6 flex-wrap">
-          <Product />
-          <Product />
-          <Product />
+        <div className="flex w-[90%] mb-[1em] justify-center gap-6 flex-wrap">
+          {Array.isArray(product) &&
+            product
+              .slice(0, 3)
+              .map((item, index) => <Product key={index} product={item} />)}
         </div>
+        <Link
+          href="/shop"
+          className="border-[2px] active:bg-[#999999] hover:bg-[#F4F5F7] mt-[3em] border-black w-[245px] h-[48px] flex justify-center items-center"
+        >
+          Show More
+        </Link>
       </div>
 
       <div className="bg-black w-full h-[auto] flex justify-center">

@@ -30,13 +30,13 @@ const Header = () => {
             Shop
           </Link>
           <Link
-            href={'/about'}
+            href={'/'}
             className="hover:border-b-[3px] text-[16px] border-black"
           >
             About
           </Link>
           <Link
-            href={'/contacts'}
+            href={'/'}
             className="hover:border-b-[3px] text-[16px] border-black"
           >
             Contact

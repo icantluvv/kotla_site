@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from './(components)/header';
 import Footer from './(components)/footer';
+import Auth from './(components)/auth';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,8 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="flex flex-col items-center">
         <Header />
+        <Auth></Auth>
         {children}
         <Footer />
       </body>

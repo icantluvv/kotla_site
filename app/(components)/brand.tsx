@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-const Brand = () => {
+const Brand: React.FC<BrandsProps> = ({ brand }) => {
   return (
     <div className="flex max-w-[386px] flex-col items-center">
       <div>
@@ -15,7 +15,7 @@ const Brand = () => {
         ></Image>
       </div>
       <span className="text-[24px]  mt-[2em] text-[#333333] font-semibold">
-        Matte
+        {brand.Brand_Name}
       </span>
     </div>
   );
