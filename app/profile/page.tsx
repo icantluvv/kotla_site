@@ -32,7 +32,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="w-full mb-[10em] mt-[10em] flex flex-col justify-center items-center">
+    <main className="w-full mb-[10em] mt-[10em] flex flex-col justify-center items-center">
       <div className="w-[200px] h-[200px] p-[2em] border-2 border-black mb-[3em]">
         <Image
           src={'/profile.svg'}
@@ -51,7 +51,7 @@ const Profile = () => {
       >
         Log Out
       </button>
-    </div>
+    </main>
   );
 };
 

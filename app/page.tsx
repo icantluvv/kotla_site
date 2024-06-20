@@ -11,7 +11,7 @@ export default async function Home() {
 
   return (
     <main className="w-full flex flex-col ">
-      <div className="flex flex-col items-center mt-[2em] mb-[4em]">
+      <section className="flex flex-col items-center mt-[2em] mb-[4em]">
         <h1 className="text-[32px] mb-[1em] font-bold	">Browse The Range</h1>
         <p className="w-[85%] text-[20px] mb-[3em] font-light">
           Explore our diverse range of lipsticks designed to suit every style
@@ -25,9 +25,9 @@ export default async function Home() {
               <Brand key={index} brand={item}></Brand>
             ))}
         </div>
-      </div>
+      </section>
 
-      <div className="flex flex-col items-center mb-[2em]">
+      <section className="flex flex-col items-center mb-[2em]">
         <h1 className="text-[40px] mb-[1em] font-bold	">Our Products</h1>
 
         <div className="flex w-[90%] mb-[1em] justify-center gap-6 flex-wrap">
@@ -42,9 +42,9 @@ export default async function Home() {
         >
           Show More
         </Link>
-      </div>
+      </section>
 
-      <div className="bg-black w-full h-[auto] flex justify-center">
+      <section className="bg-black w-full h-[auto] flex justify-center">
         <div className="flex w-[90%] pt-[3em] pb-[3em] justify-between items-center">
           <div className="text-white w-[27%]">
             <h1 className="text-[40px]">Beautiful lipstick inspiration</h1>
@@ -66,9 +66,9 @@ export default async function Home() {
             ></Image>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="mt-[5em] mb-[5em]">
+      <section className="mt-[5em] mb-[5em]">
         <Image
           src={'/back_lower.svg'}
           alt={''}
@@ -77,7 +77,7 @@ export default async function Home() {
           layout="responsive"
           className="max-h-[780px]"
         ></Image>
-      </div>
+      </section>
     </main>
   );
 }

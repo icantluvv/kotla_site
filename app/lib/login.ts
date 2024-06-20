@@ -22,7 +22,10 @@ export function Login(
       })
       .then((data) => {
         const token = data.token;
+        const role = data.roles.role;
+        console.log(data);
         localStorage.setItem('token', token);
+        localStorage.setItem('role', role);
         resolve(data);
       })
       .catch((error) => {
